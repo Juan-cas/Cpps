@@ -1,8 +1,8 @@
 #ifndef FORM_HPP
 #define FORM_HPP
 
-#include <iostream>
 #include "Bureaucrat.hpp"
+#include <iostream>
 
 class Bureaucrat;
 
@@ -18,13 +18,14 @@ public:
   AForm(std::string Name, bool Signed, int Grade, int Rgrade);
 
   // destructor:
-  ~AForm();
+  virtual ~AForm();
 
   // setters:
   void setSigned(bool Signed);
 
   // modifiers:
   virtual void beSigned(Bureaucrat &person);
+  virtual void beExcecuted(Bureaucrat &person) const;
 
   // getters:
   std::string getName() const;
@@ -47,6 +48,11 @@ public:
   };
 
   class GradeTooLowToSign : public std::exception {
+  public:
+    virtual const char *what() const throw();
+  };
+
+  class FormNotSignedException : public std::exception {
   public:
     virtual const char *what() const throw();
   };

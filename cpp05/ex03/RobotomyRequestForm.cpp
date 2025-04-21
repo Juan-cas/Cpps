@@ -19,10 +19,24 @@ RobotomyForm::~RobotomyForm() {
   std::cout << "RobotomyRequestForm destructor has been called" << std::endl;
 }
 
-void RobotomyForm::beSigned(Bureaucrat &person) {
-  bool is_signed = this->getSigned();
-  if (person.getGrade() <= this->getGrade() && is_signed == false) {
-    this->setSigned(true);
+
+void RobotomyForm::beExcecuted(Bureaucrat &person) const {
+  if (this->getSigned() == false) {
+    std::cout << "The form has not been signed therefore cant be executed"
+              << std::endl;
+    throw FormNotSignedException();
+    return;
+  }
+  if (person.getGrade() > this->getRgrade()) {
+    std::cout << "The Bureaucrat " << person.getName()
+              << " doesnt have the required grade to execute the form "
+              << std::endl;
+    throw GradeTooLowException();
+    return;
+  }
+  if (person.getGrade() <= this->getRgrade() && this->getSigned() == true) {
+    std::cout << "The Bureaucrat: " << person.getName()
+              << " has executed the form " << std::endl;
     std::srand(std::time(0));
     int random_chance = std::rand() % 100;
     if (random_chance < 50) {
@@ -33,9 +47,5 @@ void RobotomyForm::beSigned(Bureaucrat &person) {
     std::cout << "The robotomy has failed" << std::endl;
     return;
   }
-  if (is_signed == true) {
-    std::cout << "The form was already signed, the bureaucrat did nothing"
-              << std::endl;
-  }
-  throw GradeTooLowToSign();
 }
+

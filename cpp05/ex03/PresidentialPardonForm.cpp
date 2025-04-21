@@ -19,17 +19,26 @@ PresidentialForm::~PresidentialForm() {
   std::cout << "PresidentiaPardonForm destructor has been called" << std::endl;
 }
 
-void PresidentialForm::beSigned(Bureaucrat &person) {
-  bool is_signed = this->getSigned();
-  if (person.getGrade() <= this->getGrade() && is_signed == false) {
-    this->setSigned(true);
+// form signers:
+void PresidentialForm::beExcecuted(Bureaucrat &person) const {
+  if (this->getSigned() == false) {
+    std::cout << "The form has not been signed therefore cant be executed"
+              << std::endl;
+    throw FormNotSignedException();
+    return;
+  }
+  if (person.getGrade() > this->getRgrade()) {
+    std::cout << "The Bureaucrat " << person.getName()
+              << " doesnt have the required grade to execute the form "
+              << std::endl;
+    throw GradeTooLowException();
+    return;
+  }
+  if (person.getGrade() <= this->getRgrade() && this->getSigned() == true) {
+    std::cout << "The Bureaucrat: " << person.getName()
+              << " has executed the form " << std::endl;
     std::cout << _Target << " has been pardoned by Zaphod Beeblebrox "
               << std::endl;
     return;
   }
-  if (is_signed == true) {
-    std::cout << "The form was already signed, the bureaucrat did nothing"
-              << std::endl;
-  }
-  throw GradeTooLowToSign();
 }

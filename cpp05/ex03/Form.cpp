@@ -25,14 +25,31 @@ int AForm::getGrade() const { return _Grade; }
 int AForm::getRgrade() const { return _Rgrade; }
 
 // modifiers:
+
+void AForm::beExcecuted(Bureaucrat &person) const {
+  if (this->getSigned() == false) {
+    std::cout << "The form has not been signed therefore cant be executed"
+              << std::endl;
+  }
+  return ;
+  if (person.getGrade() <= this->getRgrade() && _Signed == true) {
+    std::cout << "The Bureaucrat: " << person.getName()
+              << " has executed the form" << std::endl;
+  }
+}
+
 void AForm::beSigned(Bureaucrat &person) {
-  if (person.getGrade() <= this->getGrade() && _Signed == false) {
-    _Signed = true;
+  if (person.getGrade() <= this->getGrade() && this->getSigned() == false) {
+    std::cout << "The Bureaucrat " << person.getName()
+              << " was able to sign the form " << this->getName()
+              << " successfully " << std::endl;
+    this->setSigned(true);
     return;
   }
   if (_Signed == true) {
     std::cout << "The form was already signed, the bureaucrat did nothing"
               << std::endl;
+    return ;
   }
   throw GradeTooLowToSign();
 }
@@ -55,4 +72,8 @@ const char *AForm::GradeTooLowException::what() const throw() {
 }
 const char *AForm::GradeTooLowToSign::what() const throw() {
   return "grade too low";
+}
+
+const char *AForm::FormNotSignedException::what() const throw() {
+  return "The form wasnt signed so it cant be executed!";
 }

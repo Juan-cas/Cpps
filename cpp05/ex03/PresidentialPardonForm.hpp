@@ -12,7 +12,7 @@ public:
   PresidentialForm(std::string target);
   ~PresidentialForm();
 
-  void beSigned(Bureaucrat &person);
+  void beExcecuted(Bureaucrat &person) const;
 };
 
 #endif

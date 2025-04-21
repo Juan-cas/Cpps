@@ -19,9 +19,24 @@ Shrubbery::~Shrubbery() {
   std::cout << "ShrubberyCreationForm destructor has been called" << std::endl;
 }
 
-void Shrubbery::beSigned(Bureaucrat &person) {
-  bool is_signed = this->getSigned();
-  if (person.getGrade() <= this->getGrade() && is_signed == false) {
+
+//form signers:
+void Shrubbery::beExcecuted(Bureaucrat &person) const {
+  if (this->getSigned() == false) {
+    std::cout << "The form has not been signed therefore cant be executed"
+              << std::endl;
+    throw FormNotSignedException();
+    return;
+  }
+  if (person.getGrade() > this->getRgrade()) {
+    std::cout << "The Bureaucrat " << person.getName()
+              << " cant execute the form " << std::endl;
+    throw GradeTooLowException();
+    return;
+  }
+  if (person.getGrade() <= this->getRgrade() && this->getSigned() == true) {
+    std::cout << "The Bureaucrat: " << person.getName()
+              << " has executed the form" << std::endl;
     std::string file_name = (_Target + "_shrubbery");
     std::ofstream outfile(file_name.c_str());
     if (outfile.is_open()) {
@@ -34,12 +49,6 @@ void Shrubbery::beSigned(Bureaucrat &person) {
               << "       }|{\n";
       outfile.close();
     }
-    this->setSigned(true);
     return;
   }
-  if (is_signed == true) {
-    std::cout << "The form was already signed, the bureaucrat did nothing"
-              << std::endl;
-  }
-  throw GradeTooLowToSign();
 }

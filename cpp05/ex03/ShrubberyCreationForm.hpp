@@ -1,5 +1,6 @@
 #ifndef SHRUBBERYCREATIONFORM_HPP
 #define SHRUBBERYCREATIONFORM_HPP
+#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
 class Shrubbery : public AForm {
@@ -12,7 +13,7 @@ public:
   Shrubbery(std::string target);
   ~Shrubbery();
 
-  void beSigned(Bureaucrat &person);
+  void beExcecuted(Bureaucrat &person) const;
 };
 
 #endif

@@ -12,7 +12,7 @@ public:
   RobotomyForm(std::string target);
   ~RobotomyForm();
 
-  void beSigned(Bureaucrat &person);
+  void beExcecuted(Bureaucrat &person) const;
 };
 
 #endif
