@@ -1,0 +1,155 @@
+[
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Bureaucrat.cpp",
+   "-o",
+   "Bureaucrat.o"
+  ],
+  "file": "Bureaucrat.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Form.cpp",
+   "-o",
+   "Form.o"
+  ],
+  "file": "Form.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "PresidentialPardonForm.cpp",
+   "-o",
+   "PresidentialPardonForm.o"
+  ],
+  "file": "PresidentialPardonForm.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "ShrubberyCreationForm.cpp",
+   "-o",
+   "ShrubberyCreationForm.o"
+  ],
+  "file": "ShrubberyCreationForm.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "RobotomyRequestForm.cpp",
+   "-o",
+   "RobotomyRequestForm.o"
+  ],
+  "file": "RobotomyRequestForm.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "test_batch_1.cpp",
+   "-o",
+   "test_batch_1.o"
+  ],
+  "file": "test_batch_1.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "test_batch_2.cpp",
+   "-o",
+   "test_batch_2.o"
+  ],
+  "file": "test_batch_2.cpp"
+ },
+ {
+  "directory": "/home/juan/Desktop/cpps/cpp05/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "test_batch_3.cpp",
+   "-o",
+   "test_batch_3.o"
+  ],
+  "file": "test_batch_3.cpp"
+ }
+]

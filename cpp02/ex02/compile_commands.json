@@ -1,0 +1,20 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-fsanitize=address,leak",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/juan/Desktop/cpps/cpp02/ex02",
+    "file": "/home/juan/Desktop/cpps/cpp02/ex02/main.cpp",
+    "output": "/home/juan/Desktop/cpps/cpp02/ex02/main.o"
+  }
+]
