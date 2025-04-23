@@ -33,8 +33,6 @@ void Harl::error() {
 }
 
 void Harl::complain(std::string str) {
-  // Harl::FooPtr fooptr[4] = {&Harl::debug, &Harl::info, &Harl::warning,
-  // &Harl::error};
   std::string str_find[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
   int i = -1;
   while (++i < 4) {
@@ -42,33 +40,18 @@ void Harl::complain(std::string str) {
       break;
   }
   switch (i) {
+  case 0:
+    this->debug();
+  case 1:
+    this->info();
+  case 2:
+    this->warning();
+  case 3:
+    this->error();
+    break;
   default:
     std::cout << "[ Probably complaining about insignificant problems ]" << '\n'
               << std::endl;
-    break;
-  case 0:
-    this->debug();
-    std::cout << std::endl;
-    this->info();
-    std::cout << std::endl;
-    this->warning();
-    std::cout << std::endl;
-    this->error();
-    break;
-  case 1:
-    this->info();
-    std::cout << std::endl;
-    this->warning();
-    std::cout << std::endl;
-    this->error();
-    break;
-  case 2:
-    this->warning();
-    std::cout << std::endl;
-    this->error();
-    break;
-  case 3:
-    this->error();
     break;
   }
 }

@@ -1,4 +1,4 @@
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp randomChump.cpp
 HEADERS = Zombie.hpp
 OBJS = $(SRCS:.cpp=.o)
 

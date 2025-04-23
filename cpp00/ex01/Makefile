@@ -1,9 +1,9 @@
-SRCS = phonebook.cpp
+SRCS = phonebook.cpp main.cpp
 HEADERS = PhoneBook.h
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = phonebook
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CXX = c++
 RM = rm -f
 

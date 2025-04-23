@@ -12,7 +12,7 @@ PresidentialForm::~PresidentialForm() {
   std::cout << "PresidentiaPardonForm destructor has been called" << std::endl;
 }
 
-//form signers:
+// form signers:
 void PresidentialForm::beExcecuted(Bureaucrat &person) const {
   if (this->getSigned() == false) {
     std::cout << "The form has not been signed therefore cant be executed"
@@ -35,4 +35,3 @@ void PresidentialForm::beExcecuted(Bureaucrat &person) const {
     return;
   }
 }
-
