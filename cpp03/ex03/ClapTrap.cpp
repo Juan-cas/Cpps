@@ -17,7 +17,14 @@ void ClapTrap::set_name(std::string name) { this->_Name = name;}
 
 // constructor & destructor
 
-ClapTrap::ClapTrap(const char *input) : _Name(input) {
+ClapTrap::ClapTrap() {
+  std::cout << "ClapTrap constructor called" << std::endl;
+  this->set_hp(10);
+  this->set_ep(10);
+  this->set_dmg(0);
+}
+
+ClapTrap::ClapTrap(std::string input) : _Name(input) {
   std::cout << "ClapTrap constructor called" << std::endl;
   this->set_name(input);
   this->set_hp(10);

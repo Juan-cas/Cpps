@@ -7,6 +7,8 @@ CXXFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address,leak -std=c++98
 CXX = c++
 RM = rm -f
 
+.PHONY: all clean fclean re
+
 all: $(NAME)
 
 $(NAME): $(OBJS)

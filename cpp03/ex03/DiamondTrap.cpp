@@ -1,24 +1,23 @@
 #include "DiamondTrap.hpp"
-#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include <iostream>
+#include <ostream>
 
-DiamondTrap::DiamondTrap(void) : ScavTrap(), FragTrap() {
-  std::cout << "DiamondTrap constructor called" << std::endl;
-  this->Hitpoints = FragTrap::Hitpoints;
-  this->Attackdamage = FragTrap::Attackdamage;
-  this->Energypoints = ScavTrap::Energypoints;
+DiamondTrap::DiamondTrap(const std::string &name)
+    : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name),
+      _Name(name) {
+  std::cout << "DiamondTrap " << get_name() << "> Status: Created" << std::endl;
+  this->set_hp(FragTrap::get_hp());
+  this->set_ep(ScavTrap::get_ep());
+  this->set_dmg(FragTrap::get_dmg());
 }
 
-DiamondTrap::DiamondTrap(const std::string& name) : ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), Name(name) {
-  std::cout << "DiamondTrap " << Name << "> Status: Created" << std::endl;
-  this->set_hp(FragTrap::get_hp());
-  this->Energypoints = ScavTrap::Energypoints;
-  this->Attackdamage = FragTrap::Attackdamage;
-
+void DiamondTrap::whoami() {
+  std::cout << "Diamond name is " << get_name() << std::endl;
+  std::cout << "Clap trap name is" << ClapTrap::get_name() << std::endl;
 }
 
 DiamondTrap::~DiamondTrap() {
   std::cout << "DiamondTrap's destructor has been called" << std::endl;
 }
-

@@ -2,11 +2,11 @@
 #define FRAGTRAP_HPP
 #include "ClapTrap.hpp"
 
-class FragTrap: public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 public:
-  FragTrap(const char *input);
+  FragTrap(std::string input);
+  FragTrap();
   void highFivesdGuys(void);
   ~FragTrap();
-
 };
 #endif

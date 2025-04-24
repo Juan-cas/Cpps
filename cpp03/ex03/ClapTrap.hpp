@@ -1,7 +1,6 @@
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
-#include <iostream>
 #include <string>
 
 class ClapTrap {
@@ -25,7 +24,8 @@ public:
   void set_dmg(int dmg);
 
   // foos
-  ClapTrap(const char *input);
+  ClapTrap(std::string input);
+  ClapTrap();
   virtual void attack(const std::string &target);
   virtual void takeDamage(unsigned int amount);
   virtual void beRepaired(unsigned int amount);
