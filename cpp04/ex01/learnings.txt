@@ -1,0 +1,34 @@
+in this excersise we are focusing on being able to both take the instantiable part of our animals class in order to be able
+to add a sub-class to an array of our main class.
+
+
+example would be:
+
+Dog puppy = new Dog();
+Animals herd[0] = puppy();
+
+
+we do this by making Animals an abstract class thats uninstantiable by using a pure method:
+
+for example we can turn:
+
+void Animals::makeSound(void); into void Animals::makeSound() cost = 0;
+
+
+thus making the method makeSound pure and the class Animals abstract and uninstantiable 
+since in the eyes of the compiler the class now becomes incompleted and needs to be overritten in the subclass by
+making the method virtual.
+
+
+we also need to be able to instantiate a class that also contains a class and handle that created class even when doing a deep copy
+and also destroying that instanteate class inside our class in this example the brain class
+
+since brain is a private member inside cat or dog we need to handle the creation of that brain on our constructor:
+
+this->brain = new Brain();
+
+and handling it in our destructor the destruction of that brain:
+
+in that case destroy this->Brain;
+
+thus handling the destruction of brain before the destruction of the class in this case cat or dog.

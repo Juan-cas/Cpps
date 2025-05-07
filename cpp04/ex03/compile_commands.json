@@ -1,0 +1,138 @@
+[
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "main.o",
+   "main.cpp"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "AMateria.o",
+   "AMateria.cpp"
+  ],
+  "file": "AMateria.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "ICharacter.o",
+   "ICharacter.cpp"
+  ],
+  "file": "ICharacter.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "IMateriaSource.o",
+   "IMateriaSource.cpp"
+  ],
+  "file": "IMateriaSource.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "Ice.o",
+   "Ice.cpp"
+  ],
+  "file": "Ice.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "Cure.o",
+   "Cure.cpp"
+  ],
+  "file": "Cure.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "Character.o",
+   "Character.cpp"
+  ],
+  "file": "Character.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex03",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "MateriaSource.o",
+   "MateriaSource.cpp"
+  ],
+  "file": "MateriaSource.cpp"
+ }
+]

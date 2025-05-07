@@ -1,11 +1,13 @@
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
-HEADERS = ClapTrap.hpp ScavTrap.hpp FragTrap.cpp
+SRCS = main.cpp AMateria.cpp ICharacter.cpp IMateriaSource.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
+HEADERS = AMaria.hpp ICharacter.hpp IMateriaSource.hpp Ice.hpp Cure.hpp Character.hpp MateriaSource.hpp
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = Robottowars
+NAME = Final_Fantasy
 CXXFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address,leak -std=c++98
 CXX = c++
 RM = rm -f
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 

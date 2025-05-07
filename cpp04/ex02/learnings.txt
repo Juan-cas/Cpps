@@ -1,0 +1,31 @@
+
+in this module we are taught how to make an abstract class that wont be instantiated
+that way it can be added to an array of a main class and it will still call the 
+overridden method of the class associated with it.
+
+
+an example would be:
+
+
+    			Animal
+			/    \
+		       /      \
+		      /        \
+		   Cat         Dog
+
+if we make a pure method like:
+
+void Animal::makeSound(void) const = 0;
+
+it will then make Animal class uninstantiable since now in the eyes of the compiler its an incomplete
+class
+
+we can make Animals abstract and uninstantiable and thus add Cat and Dog to an array of Animals
+and it will know for example:
+
+Animals[0] = new Cat();
+Animals[1] = new Dog();
+
+if we do Animals[0]->makeSound();
+
+it will make the cat sound instead of the Animal sound since Animals is now an uninstantiable class.

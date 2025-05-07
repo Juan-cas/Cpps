@@ -8,13 +8,22 @@ protected:
   std::string _type;
 
 public:
-  //getter:
-  virtual std::string getType() const;
-  //setter:
+  // Canonical way
+  Animal();
+  Animal(std::string type);
+  Animal(const Animal &otherAnimal);
+  virtual ~Animal(void);
+  virtual Animal* clone() const = 0;
+  Animal &operator=(const Animal &this_animal);
+
+  // setter:
   virtual void set_type(std::string type);
-  virtual Animal &operator=(Animal &this_animal);
+
+  // getter:
+  std::string getType() const;
+ 
+  // methods:
   virtual void makeSound() const;
-  virtual ~Animal();
 };
 
 #endif

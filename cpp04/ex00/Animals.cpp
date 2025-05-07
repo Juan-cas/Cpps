@@ -1,4 +1,5 @@
 #include "Animals.hpp"
+#include <iostream>
 #include <ostream>
 
 Animal::Animal() : _type("Jungle of animals") {
@@ -6,7 +7,12 @@ Animal::Animal() : _type("Jungle of animals") {
 }
 
 Animal::Animal(std::string type) : _type(type) {
-  std::cout << "An animal constructor was called with the type " << type << std::endl;
+  std::cout << "An animal constructor was called with the type " << type
+            << std::endl;
+}
+
+Animal::Animal(const Animal &otherAnimal) : _type(otherAnimal._type) {
+  std::cout << "Animal copy constructor called" << std::endl;
 }
 
 Animal::~Animal() {
@@ -17,10 +23,10 @@ void Animal::makeSound() const {
   std::cout << "All animals around you make sound" << std::endl;
 }
 
-Animal &Animal::operator=(Animal &this_animal) {
+Animal &Animal::operator=(const Animal &otherAnimal) {
   std::cout << "Animal assigment operator called" << std::endl;
-  if (&this_animal != this) {
-    this->_type = this_animal._type;
+  if (this != &otherAnimal) {
+    this->_type = otherAnimal._type;
   }
   return *this;
 }

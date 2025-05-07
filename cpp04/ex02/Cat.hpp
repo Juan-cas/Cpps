@@ -6,11 +6,19 @@
 
 class Cat : public Animal {
 private:
+  std::string _type;
   Brain *_brain;
+
 public:
+  // canon:
   Cat();
+  Cat(const Cat &otherAnimal);
+  virtual Cat &operator=(const Cat &this_animal);
   virtual ~Cat(void);
-  virtual void makeSound() const;
+  Animal *clone() const;
+
+  // method:
+  void makeSound() const;
 };
 
 #endif

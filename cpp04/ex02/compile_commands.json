@@ -1,0 +1,223 @@
+[
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Animals.cpp",
+   "-o",
+   "Animals.o"
+  ],
+  "file": "Animals.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Cat.cpp",
+   "-o",
+   "Cat.o"
+  ],
+  "file": "Cat.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Dog.cpp",
+   "-o",
+   "Dog.o"
+  ],
+  "file": "Dog.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "WrongAnimal.cpp",
+   "-o",
+   "WrongAnimal.o"
+  ],
+  "file": "WrongAnimal.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "WrongCat.cpp",
+   "-o",
+   "WrongCat.o"
+  ],
+  "file": "WrongCat.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Animals.cpp",
+   "-o",
+   "Animals.o"
+  ],
+  "file": "Animals.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Cat.cpp",
+   "-o",
+   "Cat.o"
+  ],
+  "file": "Cat.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Dog.cpp",
+   "-o",
+   "Dog.o"
+  ],
+  "file": "Dog.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "WrongAnimal.cpp",
+   "-o",
+   "WrongAnimal.o"
+  ],
+  "file": "WrongAnimal.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "WrongCat.cpp",
+   "-o",
+   "WrongCat.o"
+  ],
+  "file": "WrongCat.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp04/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Brain.cpp",
+   "-o",
+   "Brain.o"
+  ],
+  "file": "Brain.cpp"
+ }
+]
