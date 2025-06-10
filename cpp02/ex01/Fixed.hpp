@@ -1,45 +1,28 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include <cmath>
+#include <ostream>
+class Fixed {
+public:
+  Fixed();
+  Fixed(const int value);
+  Fixed(const float value);
+  Fixed(const Fixed &other);
+  ~Fixed();
 
-class Fixed
-{
-	public:
-	Fixed();
-	Fixed(const int value);
-	Fixed(const float value);
-	Fixed(const Fixed& other);
-	~Fixed();
+  Fixed &operator=(const Fixed &other);
 
-	Fixed& operator=(const Fixed& other);
+  int toInt() const;
+  float toFloat() const;
 
-	int toInt() const;
-	float toFloat() const;
+  int getRawBits() const;
+  void setRawBits(int raw);
 
-	int operator-(const Fixed& other) const;
-	int operator+(const Fixed& other) const;
-	int operator*(const Fixed& other) const;
-	int operator/(const Fixed& other) const;
-	bool operator==(const Fixed& other) const;
-	bool operator!=(const Fixed& other) const;
-	bool operator<(const Fixed& other) const;
-	bool operator>(const Fixed& other) const;
-	bool operator<=(const Fixed& other) const;
-	bool operator>=(const Fixed& other) const;
-	Fixed *min(Fixed &first, Fixed &second);
-
-
-	int getRawBits() const;
-	void setRawBits(int raw);
-
-	friend std::ostream& operator<<(std::ostream& os, const Fixed& x);
-	private:
-	int value;
-	static const int f_bits = 8;
+private:
+  int value;
+  static const int f_bits = 8;
 };
 
-#endif //FIXED_HPP
+std::ostream &operator<<(std::ostream &os, const Fixed &x);
+
+#endif // FIXED_HPP

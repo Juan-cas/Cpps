@@ -1,37 +1,51 @@
 #include "PresidentialPardonForm.hpp"
+#include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
-PresidentialForm::PresidentialForm(const std::string Name, bool Signed,
-                                   int Grade, int Rgrade,
-                                   const std::string target)
-    : AForm(Name, Signed, Grade, Rgrade), _Target(target) {
-  std::cout << "The constructor for the PresidentialForm has been called"
+PresidentialPardonForm::PresidentialPardonForm()
+    : AForm("Default PresidentialPardonForm", false, 25, 5),
+      _Target("Default target") {
+  std::cout << "Default PresidentialPardonForm constructor has been called"
             << std::endl;
 }
 
-PresidentialForm::~PresidentialForm() {
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
+    : AForm("PresidentialPardonForm", false, 25, 5), _Target(target) {
+  std::cout << "PresidentialPardonForm constructor has been called"
+            << std::endl;
+}
+
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &Form)
+    : AForm(Form) {
+  _Target = Form.GetTarget();
+}
+
+PresidentialPardonForm::~PresidentialPardonForm() {
   std::cout << "PresidentiaPardonForm destructor has been called" << std::endl;
 }
 
 // form signers:
-void PresidentialForm::beExcecuted(Bureaucrat &person) const {
+void PresidentialPardonForm::execute(Bureaucrat &person) const {
   if (this->getSigned() == false) {
     std::cout << "The form has not been signed therefore cant be executed"
               << std::endl;
     throw FormNotSignedException();
-    return;
   }
   if (person.getGrade() > this->getRgrade()) {
     std::cout << "The Bureaucrat " << person.getName()
               << " doesnt have the required grade to execute the form "
               << std::endl;
     throw GradeTooLowException();
-    return;
   }
-  if (person.getGrade() <= this->getRgrade() && this->getSigned() == true) {
-    std::cout << "The Bureaucrat: " << person.getName()
-              << " has executed the form " << std::endl;
-    std::cout << _Target << " has been pardoned by Zaphod Beeblebrox "
-              << std::endl;
-    return;
-  }
+  std::cout << "The Bureaucrat: " << person.getName()
+            << " has executed the form " << std::endl;
+  std::cout << _Target << " has been pardoned by Zaphod Beeblebrox "
+            << std::endl;
+  return;
+}
+
+std::string PresidentialPardonForm::GetTarget() const { return this->_Target; }
+
+void PresidentialPardonForm::SetTarget(std::string &target) {
+  _Target = target;
 }

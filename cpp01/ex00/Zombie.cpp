@@ -13,10 +13,8 @@ Zombie::Zombie(std::string name) {
             << std::endl;
 }
 
-Zombie *Zombie::newZombie(std::string name) {
-  Zombie *zombie = new Zombie(name);
-  zombie->announce();
-  return (zombie);
+Zombie *newZombie(std::string name) {
+  return (new Zombie(name));
 }
 
 Zombie::~Zombie() {

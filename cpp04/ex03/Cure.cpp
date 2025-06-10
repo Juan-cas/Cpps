@@ -14,7 +14,7 @@ AMateria *Cure::clone() const { return new Cure(*this); }
 // Overloards:
 
 Cure &Cure::operator=(const Cure &tmp) {
-  AMateria::operator=(tmp);
+  _Type = tmp._Type;
   return (*this);
 }
 

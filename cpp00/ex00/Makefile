@@ -6,6 +6,8 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CXX = c++
 RM = rm -f
 
+.PHONY: all clean fclean re
+
 all: $(NAME)
 
 $(NAME): $(OBJS)

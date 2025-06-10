@@ -4,8 +4,16 @@
 
 class ScavTrap : public ClapTrap {
 public:
+  // constructor:
+  ScavTrap();
   ScavTrap(const char *input);
-  void guardGate();
+  ScavTrap(const ScavTrap &tmp);
   ~ScavTrap();
+
+  // overloads:
+  ScavTrap &operator=(const ScavTrap &tmp);
+
+  // methods:
+  void guardGate();
 };
 #endif

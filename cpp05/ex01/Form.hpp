@@ -2,9 +2,7 @@
 #define FORM_HPP
 #include <iostream>
 
-#include "Bureaucrat.hpp"
-
-class Bureaucrat;
+typedef class Bureaucrat Bureaucrat;
 
 class Form {
 private:
@@ -15,13 +13,13 @@ private:
 
 public:
   // constructor:
+  Form();
   Form(std::string Name, bool Signed, int Grade, int Rgrade);
-
-  // destructor:
+  Form(Form &form);
   ~Form();
 
   // setters:
-  void setSigned(bool Signed);
+  void setSigned(const bool Signed);
 
   // modifiers:
   void beSigned(Bureaucrat &person);
@@ -34,6 +32,7 @@ public:
 
   // overloaders:
   friend std::ostream &operator<<(std::ostream &out, const Form &obj);
+  Form &operator=(const Form &form);
 
   // exception classes:
   class GradeTooHighException : public std::exception {

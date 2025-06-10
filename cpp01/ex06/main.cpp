@@ -1,4 +1,6 @@
 #include "harl.hpp"
+#include <iostream>
+#include <ostream>
 
 int main(int argc, char *argv[]) {
   if (argc == 1) {

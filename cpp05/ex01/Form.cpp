@@ -1,18 +1,24 @@
 #include "Form.hpp"
 #include <iostream>
+#include "Bureaucrat.hpp"
+
+Form::Form() : _Name("RandomForm"), _Signed(false), _Grade(149), _Rgrade(149) {}
 
 Form::Form(std::string Name, bool Signed, int Grade, int Rgrade)
     : _Name(Name), _Signed(Signed), _Grade(Grade), _Rgrade(Rgrade) {
   if (Grade < 1) {
     throw GradeTooHighException();
   }
-  if (Grade > 149) {
+  if (Grade > 150) {
     throw GradeTooLowException();
   }
   std::cout << "Form constructor has been called" << std::endl;
 }
 
-// destructor:
+Form::Form(Form &form)
+    : _Name(form.getName()), _Signed(form.getSigned()), _Grade(form.getGrade()),
+      _Rgrade(form.getRgrade()) {}
+
 Form::~Form() { std::cout << "Form destructor has been called" << std::endl; }
 
 // setters:
@@ -30,9 +36,10 @@ void Form::beSigned(Bureaucrat &person) {
     _Signed = true;
     return;
   }
-  if (_Signed == true) {
+  else if (_Signed == true) {
     std::cout << "The form was already signed, the bureaucrat did nothing"
               << std::endl;
+    return;
   }
   throw GradeTooLowToSign();
 }
@@ -45,6 +52,14 @@ std::ostream &operator<<(std::ostream &out, const Form &obj) {
       << " to be signed " << std::endl;
   return out;
 }
+
+Form &Form::operator=(const Form &form) {
+  if (this != &form) {
+    this->setSigned(form.getSigned());
+  }
+  return *this;
+}
+
 // Exception classes:
 const char *Form::GradeTooHighException::what() const throw() {
   return "Grade exceeds the max!";

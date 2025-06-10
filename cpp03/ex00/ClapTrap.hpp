@@ -12,6 +12,15 @@ private:
   int _Attackdamage;
 
 public:
+  // constructors:
+  ClapTrap();
+  ClapTrap(const std::string input);
+  ClapTrap(const ClapTrap &robot);
+  virtual ~ClapTrap();
+
+  // overloads:
+  ClapTrap &operator=(const ClapTrap &tmp);
+
   // getters:
   std::string get_name(void);
   int get_hp(void);
@@ -25,12 +34,10 @@ public:
   void set_dmg(int dmg);
 
   // foos
-  ClapTrap(const char *input);
   virtual void attack(const std::string &target);
   virtual void takeDamage(unsigned int amount);
   virtual void beRepaired(unsigned int amount);
   virtual void use_energy(void);
-  virtual ~ClapTrap();
 };
 
 #endif

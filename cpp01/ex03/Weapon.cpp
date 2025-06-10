@@ -1,17 +1,17 @@
 #include "Weapon.hpp"
+#include <iostream>
+#include <ostream>
 
-Weapon::Weapon(string weapon)
-{
-	this->type = weapon;
+Weapon::Weapon() {
+  std::cout << "Weapon default constructor called" << std::endl;
 }
 
-void Weapon::setType(string Weapon)
-{
-	this->type = Weapon;
+Weapon::Weapon(std::string weapon) : _Type(weapon) {
+  std::cout << "Defined Weapon constructor called" << std::endl;
 }
 
-string Weapon::getType()
-{
-	return this->type;
-}
+void Weapon::setType(std::string Weapon) { this->_Type = Weapon; }
 
+Weapon::~Weapon() { std::cout << "Weapon destructor called" << std::endl; }
+
+std::string Weapon::getType() { return this->_Type; }

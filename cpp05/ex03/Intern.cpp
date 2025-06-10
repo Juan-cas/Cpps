@@ -10,12 +10,23 @@ Intern::Intern() {
       << std::endl;
 }
 
+Intern::Intern(const Intern &other) {
+  (void)other;
+  std::cout << "intern copy constructor has been called" << std::endl;
+}
+
+Intern &Intern::operator=(const Intern &other) {
+  if (this != &other) {
+  }
+  return *this;
+}
+
 Intern::~Intern() { std::cout << "intern destructor called" << std::endl; }
 
 int findForm(std::string form) {
-  if (form == "shrubbery request")
+  if (form == "shrubbery creation")
     return 1;
-  if (form == "presidential request")
+  if (form == "presidential pardon")
     return 2;
   if (form == "robotomy request")
     return 3;
@@ -27,13 +38,13 @@ AForm *Intern::makeForm(const std::string &name, const std::string &target) {
   switch (form_type) {
   case 1:
     std::cout << "Intern creates a ShrubberyCreationForm" << std::endl;
-    return new Shrubbery(target);
+    return new ShrubberyCreationForm(target);
   case 2:
     std::cout << "Intern creates a PresidentialPardonForm" << std::endl;
-    return new PresidentialForm(target);
+    return new PresidentialPardonForm(target);
   case 3:
     std::cout << "Intern creates a RobotomyRequestForm" << std::endl;
-    return new RobotomyForm(target);
+    return new RobotomyRequestForm(target);
   default:
     std::cout << "the intern didnt understand the request to create a form and "
                  "thus did nothing"

@@ -1,33 +1,38 @@
 #include "RobotomyRequestForm.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "Bureaucrat.hpp"
 #include <cstdlib>
 #include <ctime>
 
-RobotomyForm::RobotomyForm(const std::string Name, bool Signed, int Grade,
-                           int Rgrade, const std::string target)
-    : AForm(Name, Signed, Grade, Rgrade), _Target(target) {
-  std::cout << "The constructor for the RobotomyRequestForm has been called"
-            << std::endl;
+RobotomyRequestForm::RobotomyRequestForm()
+    : AForm("RobotomyRequestForm", false, 72, 45), _Target("default target") {
+  std::cout << "RobotomyRequestForm constructor called" << std::endl;
 }
 
-RobotomyForm::RobotomyForm(std::string target)
-    : AForm("Intern_created_RobotomyForm", false, 149, 149), _Target(target) {
-  std::cout << "The intern has created a RobotomyForm" << std::endl;
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
+    : AForm("RobotomyRequestForm", false, 72, 45), _Target(target) {
+  std::cout << "RobotomyRequestForm constructor called" << std::endl;
 }
 
-RobotomyForm::~RobotomyForm() {
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &other)
+    : AForm(other) {
+  _Target = other.GetTarget();
+  std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
+}
+
+RobotomyRequestForm::~RobotomyRequestForm() {
   std::cout << "RobotomyRequestForm destructor has been called" << std::endl;
 }
 
-
-void RobotomyForm::beExcecuted(Bureaucrat &person) const {
+// form signers:
+void RobotomyRequestForm::execute(Bureaucrat &person) const {
   if (this->getSigned() == false) {
     std::cout << "The form has not been signed therefore cant be executed"
               << std::endl;
     throw FormNotSignedException();
     return;
   }
-  if (person.getGrade() > this->getRgrade()) {
+  if (person.getGrade() > getRgrade()) {
     std::cout << "The Bureaucrat " << person.getName()
               << " doesnt have the required grade to execute the form "
               << std::endl;
@@ -40,7 +45,7 @@ void RobotomyForm::beExcecuted(Bureaucrat &person) const {
     std::srand(std::time(0));
     int random_chance = std::rand() % 100;
     if (random_chance < 50) {
-      std::cout << "drilling noises, " << this->_Target
+      std::cout << "drilling noises, " << this->GetTarget()
                 << " has been robotomized." << std::endl;
       return;
     }
@@ -49,3 +54,4 @@ void RobotomyForm::beExcecuted(Bureaucrat &person) const {
   }
 }
 
+std::string RobotomyRequestForm::GetTarget() const { return _Target; }

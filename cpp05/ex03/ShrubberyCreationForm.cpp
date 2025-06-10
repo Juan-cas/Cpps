@@ -1,27 +1,30 @@
 #include "ShrubberyCreationForm.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "Bureaucrat.hpp"
 #include <fstream>
 #include <iostream>
 
-Shrubbery::Shrubbery(const std::string Name, bool Signed, int Grade, int Rgrade,
-                     const std::string target)
-    : AForm(Name, Signed, Grade, Rgrade), _Target(target) {
-  std::cout << "The constructor for the ShrubberyCreationForm has been called"
+ShrubberyCreationForm::ShrubberyCreationForm()
+    : AForm("ShrubberyCreationFormCreationForm", false, 145, 137),
+      _Target("Default Target") {
+  std::cout << "Default ShrubberyCreationFormCreationForm with default target"
             << std::endl;
 }
 
-Shrubbery::Shrubbery(std::string target)
-    : AForm("Intern_created_ShrubberyForm", false, 149, 149), _Target(target) {
-  std::cout << "The intern has created a ShrubberyForm" << std::endl;
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target)
+    : AForm("ShrubberyCreationFormCreationForm", false, 145, 137),
+      _Target(target) {
+  std::cout << "ShrubberyCreationFormCreationForm called with target: "
+            << target << "." << std::endl;
 }
 
-Shrubbery::~Shrubbery() {
-  std::cout << "ShrubberyCreationForm destructor has been called" << std::endl;
+ShrubberyCreationForm::~ShrubberyCreationForm() {
+  std::cout << "ShrubberyCreationFormCreationForm destructor has been called"
+            << std::endl;
 }
 
-
-//form signers:
-void Shrubbery::beExcecuted(Bureaucrat &person) const {
+// form signers:
+void ShrubberyCreationForm::execute(Bureaucrat &person) const {
   if (this->getSigned() == false) {
     std::cout << "The form has not been signed therefore cant be executed"
               << std::endl;

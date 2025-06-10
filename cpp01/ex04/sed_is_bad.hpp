@@ -1,17 +1,12 @@
 #ifndef SED_IS_BAD_HPP
 #define SED_IS_BAD_HPP
 
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include <fstream>
 #include <cstdlib>
+#include <string>
 
-using namespace std;
+void write_file(const std::string &filename, const std::string &content);
+std::string find_and_replace(const std::string &file_content, std::string &str1,
+                             std::string &str2);
+std::string read_file(const std::string &filename);
 
-void	write_file(const string &filename, const string &content);
-string	find_and_replace(const string &file_content, string &str1, string &str2);
-string	read_file(const string &filename);
-
-
-#endif //SED_IS_BAD_HPP
+#endif // SED_IS_BAD_HPP

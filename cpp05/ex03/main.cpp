@@ -1,40 +1,39 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
 #include "Intern.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include <cassert>
+#include <iostream>
 
-int	main() {
-	Bureaucrat *	Donald = new Bureaucrat("Donald", 2);
-	Bureaucrat *	Joe = new Bureaucrat("Joe", 10);
-	Bureaucrat *	Miguel = new Bureaucrat("Miguel", 65);
-	Intern *		nobody = new Intern();
-	AForm *			shru = new Shrubbery("joe");
-	AForm *			robot = new RobotomyForm("Donald");
-	AForm *			ppf = NULL;
+int main() {
+  Intern someRandomIntern;
+  Bureaucrat highRanker("Alice", 1); // Top grade bureaucrat
 
-	try {
-		ppf = nobody->makeForm("presidential request", "joe");
-		robot->beSigned(*Miguel);
-		shru->beSigned(*Joe);
-		ppf->beSigned(*Joe);
-		robot->beExcecuted(*Donald);
-		shru->beExcecuted(*Donald);
-		ppf->beExcecuted(*Donald);
-	}
-	catch(const std::exception& e) {
-		std::cerr << e.what() << '\n';
-	}
+  std::cout << "\n--- Creating PresidentialPardonForm ---" << std::endl;
+  AForm *form1 = someRandomIntern.makeForm("presidential pardon", "Neo");
+  if (form1) {
+    highRanker.signForm(*form1);
+    highRanker.executeForm(*form1);
+    delete form1;
+  }
 
-	std::cout << *shru << std::endl;
-	std::cout << *robot << std::endl;
+  std::cout << "\n--- Creating RobotomyRequestForm ---" << std::endl;
+  AForm *form2 = someRandomIntern.makeForm("robotomy request", "Trinity");
+  if (form2) {
+    highRanker.signForm(*form2);
+    highRanker.executeForm(*form2);
+    delete form2;
+  }
 
-	delete ppf;
-	delete robot;
-	delete shru;
-	delete nobody;
-	delete Miguel;
-	delete Joe;
-	delete Donald;
+  std::cout << "\n--- Creating ShrubberyCreationForm ---" << std::endl;
+  AForm *form3 = someRandomIntern.makeForm("shrubbery creation", "Zion");
+  if (form3) {
+    highRanker.signForm(*form3);
+    highRanker.executeForm(*form3);
+    delete form3;
+  }
+
+  std::cout << "\n--- Creating an Unknown Form ---" << std::endl;
+  AForm *form4 = someRandomIntern.makeForm("death star plan", "Alderaan");
+  if (!form4)
+    std::cout << "Form creation failed as expected for unknown form.\n";
+
+  return 0;
 }

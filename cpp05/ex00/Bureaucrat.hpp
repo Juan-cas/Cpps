@@ -7,7 +7,9 @@ private:
 
 public:
   // constructor / destructor
-  Bureaucrat(std::string Name, int Grade);
+  Bureaucrat();
+  Bureaucrat(const std::string Name, int Grade);
+  Bureaucrat(const Bureaucrat &burocrat);
   ~Bureaucrat();
 
   // getters:
@@ -15,11 +17,10 @@ public:
   int getGrade() const;
 
   // setters:
-  void setName(std::string Name);
   void setGrade(int Grade);
 
   // value changers:
-  void gradeIncrese();
+  void gradeIncrease();
   void gradeDecrease();
 
   // exception classes:
@@ -34,4 +35,6 @@ public:
 
   // overloads:
   friend std::ostream &operator<<(std::ostream &out, const Bureaucrat &obj);
+
+  Bureaucrat &operator=(const Bureaucrat &other);
 };

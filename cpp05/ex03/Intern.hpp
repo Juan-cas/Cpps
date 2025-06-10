@@ -1,19 +1,19 @@
 #ifndef INTERN_HPP
 #define INTERN_HPP
 
-
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <string>
 
 class Intern {
-  private:
+private:
   friend int findForm(std::string form);
 
 public:
   Intern();
+  Intern(const Intern &other);
   ~Intern();
 
+  Intern &operator=(const Intern &other);
   AForm *makeForm(const std::string &name, const std::string &target);
 };
 

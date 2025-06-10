@@ -17,6 +17,7 @@ public:
   // constructor:
   AForm(std::string Name, bool Signed, int Grade, int Rgrade);
 
+
   // destructor:
   virtual ~AForm();
 

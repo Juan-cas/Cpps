@@ -1,9 +1,5 @@
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
-
+#include "Form.hpp"
 #include <string>
-
-class Form;
 
 class Bureaucrat {
 private:
@@ -12,7 +8,9 @@ private:
 
 public:
   // constructor / destructor
-  Bureaucrat(std::string Name, int Grade);
+  Bureaucrat();
+  Bureaucrat(const std::string Name, int Grade);
+  Bureaucrat(const Bureaucrat &burocrat);
   ~Bureaucrat();
 
   // getters:
@@ -20,11 +18,10 @@ public:
   int getGrade() const;
 
   // setters:
-  void setName(std::string Name);
   void setGrade(int Grade);
 
   // value changers:
-  void gradeIncrese();
+  void gradeIncrease();
   void gradeDecrease();
   void signForm(Form &form);
 
@@ -33,7 +30,6 @@ public:
   public:
     virtual const char *what() const throw();
   };
-
   class GradeTooLowException : public std::exception {
   public:
     virtual const char *what() const throw();
@@ -41,5 +37,6 @@ public:
 
   // overloads:
   friend std::ostream &operator<<(std::ostream &out, const Bureaucrat &obj);
+
+  Bureaucrat &operator=(const Bureaucrat &other);
 };
-#endif

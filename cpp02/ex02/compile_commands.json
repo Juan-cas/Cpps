@@ -1,20 +1,36 @@
 [
-  {
-    "arguments": [
-      "/usr/bin/c++",
-      "-Wall",
-      "-Wextra",
-      "-Werror",
-      "-g3",
-      "-fsanitize=address,leak",
-      "-std=c++98",
-      "-c",
-      "-o",
-      "main.o",
-      "main.cpp"
-    ],
-    "directory": "/home/juan/Desktop/cpps/cpp02/ex02",
-    "file": "/home/juan/Desktop/cpps/cpp02/ex02/main.cpp",
-    "output": "/home/juan/Desktop/cpps/cpp02/ex02/main.o"
-  }
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp02/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp02/ex02",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Fixed.cpp",
+   "-o",
+   "Fixed.o"
+  ],
+  "file": "Fixed.cpp"
+ }
 ]

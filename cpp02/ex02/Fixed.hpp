@@ -34,19 +34,19 @@ public:
   bool operator>(const Fixed &other) const;
   bool operator<=(const Fixed &other) const;
   bool operator>=(const Fixed &other) const;
-  static Fixed& min(Fixed &first, Fixed &second);
+  static Fixed &min(Fixed &first, Fixed &second);
   static const Fixed &min(const Fixed &first, const Fixed &second);
-  static Fixed& max(Fixed &first, Fixed &second);
+  static Fixed &max(Fixed &first, Fixed &second);
   static const Fixed &max(const Fixed &first, const Fixed &second);
 
   int getRawBits() const;
   void setRawBits(int raw);
 
-  friend std::ostream &operator<<(std::ostream &os, const Fixed &x);
-
 private:
   int value;
   static const int f_bits = 8;
 };
+
+std::ostream &operator<<(std::ostream &os, const Fixed &x);
 
 #endif // FIXED_HPP

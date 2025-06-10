@@ -5,7 +5,6 @@
 #include <iostream>
 
 int main() {
-  
 
   DiamondTrap *dt = new DiamondTrap("Diamy");
   dt->get_name();

@@ -2,7 +2,7 @@
 #define IMATERIASOURCE_HPP
 #include <string>
 
-typedef struct AMateria AMateria;
+typedef class AMateria AMateria;
 
 class IMateriaSource {
 

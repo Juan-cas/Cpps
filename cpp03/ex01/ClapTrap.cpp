@@ -3,21 +3,25 @@
 
 // getters
 
-std::string ClapTrap::get_name(void) { return this->_Name; }
-int ClapTrap::get_hp(void) { return this->_Hitpoints; }
-int ClapTrap::get_ep(void) { return this->_Energypoints; }
-int ClapTrap::get_dmg(void) { return this->_Attackdamage; }
+std::string ClapTrap::get_name(void) const { return this->_Name; }
+int ClapTrap::get_hp(void) const { return this->_Hitpoints; }
+int ClapTrap::get_ep(void) const { return this->_Energypoints; }
+int ClapTrap::get_dmg(void) const { return this->_Attackdamage; }
 
 // setters
 
 void ClapTrap::set_hp(int hp) { this->_Hitpoints = hp; }
 void ClapTrap::set_ep(int ep) { this->_Energypoints = ep; }
 void ClapTrap::set_dmg(int dmg) { this->_Attackdamage = dmg; }
-void ClapTrap::set_name(std::string name) { this->_Name = name;}
+void ClapTrap::set_name(std::string name) { this->_Name = name; }
 
 // constructor & destructor
 
-ClapTrap::ClapTrap(const char *input) : _Name(input) {
+ClapTrap::ClapTrap() {
+  std::cout << "Claptrap default constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(const std::string input) : _Name(input) {
   std::cout << "ClapTrap constructor called" << std::endl;
   this->set_name(input);
   this->set_hp(10);
@@ -25,19 +29,40 @@ ClapTrap::ClapTrap(const char *input) : _Name(input) {
   this->set_dmg(0);
 }
 
-ClapTrap::~ClapTrap() { std::cout << "ClapTrap Destructor called" << std::endl; }
+ClapTrap::ClapTrap(const ClapTrap &robot) {
+  std::cout << "ClapTrap copy constructor called" << std::endl;
+  this->_Name = robot._Name;
+  this->_Energypoints = robot._Energypoints;
+  this->_Attackdamage = robot._Attackdamage;
+  this->_Hitpoints = robot._Hitpoints;
+}
 
+ClapTrap::~ClapTrap() {
+  std::cout << "ClapTrap Destructor called" << std::endl;
+}
+
+// overloads:
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &tmp) {
+  if (this != &tmp) {
+    this->_Name = tmp._Name;
+    this->_Hitpoints = tmp._Hitpoints;
+    this->_Attackdamage = tmp._Attackdamage;
+    this->_Energypoints = tmp._Energypoints;
+  }
+  return *this;
+}
 // claptrap foos
 
 void ClapTrap::attack(const std::string &target) {
   if (_Hitpoints <= 0) {
-    std::cout << this->get_name() << " doesn't have enought Hitpoints for anything"
-              << std::endl;
+    std::cout << this->get_name()
+              << " doesn't have enought Hitpoints for anything" << std::endl;
     return;
   }
   if (_Energypoints <= 0) {
-    std::cout << this->get_name() << " doesn't have enought energy for Attacking"
-              << std::endl;
+    std::cout << this->get_name()
+              << " doesn't have enought energy for Attacking" << std::endl;
     return;
   }
   std::cout << this->get_name() << " attacks " << target << ", for "
@@ -47,7 +72,8 @@ void ClapTrap::attack(const std::string &target) {
 
 void ClapTrap::takeDamage(unsigned int amount) {
   if (_Hitpoints <= 0) {
-    std::cout << this->get_name() << " has already ceaced to function" << std::endl;
+    std::cout << this->get_name() << " has already ceaced to function"
+              << std::endl;
     return;
   }
   std::cout << this->get_name() << " gets hit for " << amount << std::endl;

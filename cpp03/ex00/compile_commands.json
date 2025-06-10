@@ -1,0 +1,36 @@
+[
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp03/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp03/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "ClapTrap.cpp",
+   "-o",
+   "ClapTrap.o"
+  ],
+  "file": "ClapTrap.cpp"
+ }
+]

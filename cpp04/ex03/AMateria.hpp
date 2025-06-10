@@ -4,12 +4,11 @@
 #include "IMateriaSource.hpp"
 #include <string>
 
-typedef struct ICharacter ICharacter;
+typedef class ICharacter ICharacter;
 
 class AMateria {
 
 private:
-  std::string _Type;
 
 public:
   // Constructors:

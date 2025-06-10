@@ -1,4 +1,5 @@
 #include "harl.hpp"
+#include <iostream>
 
 Harl::Harl() {};
 Harl::~Harl() {};

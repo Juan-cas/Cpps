@@ -1,0 +1,53 @@
+[
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=leak,address",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ },
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=leak,address",
+   "-std=c++98",
+   "-c",
+   "Zombie.cpp",
+   "-o",
+   "Zombie.o"
+  ],
+  "file": "Zombie.cpp"
+ },
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex01",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=leak,address",
+   "-std=c++98",
+   "-c",
+   "zombieHorde.cpp",
+   "-o",
+   "zombieHorde.o"
+  ],
+  "file": "zombieHorde.cpp"
+ }
+]

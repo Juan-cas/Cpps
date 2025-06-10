@@ -18,5 +18,13 @@ int main() {
     club.setType("some other type of club");
     jim.attack();
   }
+  {
+    Weapon axe = Weapon("Crude Axe");
+    HumanA axel("axel", axe);
+    HumanB log("logia");
+
+    axel.attack();
+    log.attack();
+  }
   return 0;
 }

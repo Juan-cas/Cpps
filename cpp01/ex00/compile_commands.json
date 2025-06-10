@@ -1,6 +1,6 @@
 [
  {
-  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
   "arguments": [
    "c++",
    "-Wall",
@@ -15,7 +15,7 @@
   "file": "main.cpp"
  },
  {
-  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
   "arguments": [
    "c++",
    "-Wall",
@@ -30,7 +30,7 @@
   "file": "Zombie.cpp"
  },
  {
-  "directory": "/home/juan/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
   "arguments": [
    "c++",
    "-Wall",

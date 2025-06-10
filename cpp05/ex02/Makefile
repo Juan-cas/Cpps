@@ -1,5 +1,5 @@
-SRCS = Bureaucrat.cpp Form.cpp main.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp test_batch_1.cpp test_batch_2.cpp test_batch_3.cpp
-HEADERS = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp tests.hpp
+SRCS = Bureaucrat.cpp AForm.cpp main.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp 
+HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp 
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = Office

@@ -117,4 +117,3 @@ void Character::use(int idx, ICharacter &target) {
 }
 
 std::string const &Character::getName() const { return _Name; }
-

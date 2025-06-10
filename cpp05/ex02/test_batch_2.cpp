@@ -1,6 +1,7 @@
 #include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
 #include "tests.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <cassert>
 #include <iostream>
 
@@ -8,7 +9,7 @@ void tests_batch_2(void) {
 
   std::cout << "\n== Test 4.1 should work as intended ==" << std::endl;
   try {
-    AForm cursedForm("Forbidden Scroll", false, 149, 5);
+    PresidentialForm form = PresidentialForm();
   } catch (const std::exception &e) {
     std::cerr << "Test 4.1 caught an unexpected exception: " << e.what()
               << std::endl;

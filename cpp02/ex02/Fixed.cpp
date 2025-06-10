@@ -91,49 +91,42 @@ Fixed Fixed::operator/(const Fixed &other) {
   return Fixed(toFloat() / other.toFloat());
 }
 
-Fixed& Fixed::operator++() {
+Fixed &Fixed::operator++() {
   this->value++;
   return *this;
 }
 
-Fixed& Fixed::operator--() {
+Fixed &Fixed::operator--() {
   this->value--;
   return *this;
 }
 
-Fixed Fixed::operator--(int) { 
+Fixed Fixed::operator--(int) {
   Fixed tmp(*this);
   --(*this);
   return tmp;
 }
 
-Fixed Fixed::operator++(int) { 
+Fixed Fixed::operator++(int) {
   Fixed tmp(*this);
   ++(*this);
   return tmp;
 }
 
-int Fixed::getValue() const {
-  return value;
-}
+int Fixed::getValue() const { return value; }
 
-Fixed& Fixed::min(Fixed &first, Fixed &second)
-{
+Fixed &Fixed::min(Fixed &first, Fixed &second) {
   return (first < second) ? first : second;
 }
 
-const Fixed& Fixed::min(const Fixed &first, const Fixed &second)
-{
+const Fixed &Fixed::min(const Fixed &first, const Fixed &second) {
   return (first < second) ? first : second;
 }
 
- Fixed& Fixed::max(Fixed &first, Fixed &second)
-{
+Fixed &Fixed::max(Fixed &first, Fixed &second) {
   return (first > second) ? first : second;
 }
 
-
- const Fixed& Fixed::max(const Fixed& first, const Fixed& second)
-{
+const Fixed &Fixed::max(const Fixed &first, const Fixed &second) {
   return (first > second) ? first : second;
 }

@@ -1,0 +1,36 @@
+[
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp05/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "Bureaucrat.cpp",
+   "-o",
+   "Bureaucrat.o"
+  ],
+  "file": "Bureaucrat.cpp"
+ },
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp05/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-g3",
+   "-fsanitize=address,leak",
+   "-std=c++98",
+   "-c",
+   "main.cpp",
+   "-o",
+   "main.o"
+  ],
+  "file": "main.cpp"
+ }
+]

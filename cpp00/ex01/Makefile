@@ -1,11 +1,13 @@
-SRCS = phonebook.cpp main.cpp
-HEADERS = PhoneBook.h
+SRCS = phonebook.cpp Contact.cpp main.cpp
+HEADERS = PhoneBook.hpp Contact.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = phonebook
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
-CXX = c++
+CXX = clang++
 RM = rm -f
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 

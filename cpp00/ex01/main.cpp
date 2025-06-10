@@ -1,4 +1,4 @@
-#include "PhoneBook.h"
+#include "PhoneBook.hpp"
 #include <iostream>
 #include <ostream>
 
@@ -24,7 +24,7 @@ int main() {
       book.Contacts[counter].c_adder(&book, information, counter);
       counter++;
     } else if (checker == "SEARCH") {
-      book.c_print(&book);
+      book.c_print();
     } else if (checker == "EXIT")
       break;
     std::cout << "Please only use ADD, SEARCH or EXIT" << std::endl;

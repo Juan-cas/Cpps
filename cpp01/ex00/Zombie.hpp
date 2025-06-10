@@ -8,7 +8,6 @@ public:
   Zombie(std::string name);
   ~Zombie(void);
 
-  Zombie *newZombie(std::string name);
   void announce();
   std::string get_name() const;
 
@@ -17,5 +16,6 @@ private:
 };
 
 void randomChump(std::string name);
+Zombie *newZombie(std::string name);
 
 #endif

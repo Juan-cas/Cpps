@@ -1,4 +1,5 @@
 #include "ClapTrap.hpp"
+#include <iostream>
 
 // getters
 
@@ -16,7 +17,7 @@ void ClapTrap::set_name(std::string name) { this->_Name = name; }
 
 // constructor & destructor
 
-ClapTrap::ClapTrap(const char *input) : _Name(input) {
+ClapTrap::ClapTrap(const std::string input) : _Name(input) {
   std::cout << "ClapTrap constructor called" << std::endl;
   this->set_name(input);
   this->set_hp(10);
@@ -24,16 +25,36 @@ ClapTrap::ClapTrap(const char *input) : _Name(input) {
   this->set_dmg(0);
 }
 
+
+ClapTrap::ClapTrap(const ClapTrap &robot) {
+  std::cout << "ClapTrap copy constructor called" << std::endl;
+  this->_Name = robot._Name;
+  this->_Energypoints = robot._Energypoints;
+  this->_Attackdamage = robot._Attackdamage;
+  this->_Hitpoints = robot._Hitpoints;
+}
+
 ClapTrap::~ClapTrap() {
   std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
+// overloads:
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &tmp) {
+  if (this != &tmp) {
+    this->_Name = tmp._Name;
+    this->_Hitpoints = tmp._Hitpoints;
+    this->_Attackdamage = tmp._Attackdamage;
+    this->_Energypoints = tmp._Energypoints;
+  }
+  return *this;
+}
 // claptrap foos
 
 void ClapTrap::attack(const std::string &target) {
   if (_Hitpoints <= 0) {
-    std::cout << this->get_name() << " has already ceased to function"
-              << std::endl;
+    std::cout << this->get_name()
+              << " doesn't have enought Hitpoints for anything" << std::endl;
     return;
   }
   if (_Energypoints <= 0) {

@@ -1,21 +1,17 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+int main() {
+  std::string name = "HI THIS IS BRAIN";
+  std::string *stringPTR = &name;
+  std::string &stringREF = name;
 
-int main()
-{
-	string name = "HI THIS IS BRAIN";
-	string	*stringPTR = &name;
-	string	&stringREF = name;
+  std::cout << &name << std::endl;
+  std::cout << stringPTR << std::endl;
+  std::cout << (&stringREF) << std::endl;
 
-	cout << &name << endl;
-	cout << stringPTR << endl;
-	cout << (&stringREF) << endl;
-
-	cout << name << endl;
-	cout << (*stringPTR) << endl;
-	cout << stringREF << endl;
-	return (0);
-
+  std::cout << name << std::endl;
+  std::cout << (*stringPTR) << std::endl;
+  std::cout << stringREF << std::endl;
+  return (0);
 };

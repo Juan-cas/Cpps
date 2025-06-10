@@ -1,9 +1,9 @@
-SRCS = Bureaucrat.cpp Form.cpp main.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp Intern.cpp
-HEADERS = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp Intern.hpp
+SRCS = Bureaucrat.cpp AForm.cpp main.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp Intern.cpp
+HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp Intern.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = Office
-CXXFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address,leak -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -pedantic -g3 -fsanitize=address,leak -std=c++98
 CXX = c++
 RM = rm -f
 

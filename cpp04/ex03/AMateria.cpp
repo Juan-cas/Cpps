@@ -12,6 +12,7 @@ AMateria::~AMateria(void) {}
 
 // Overloads:
 
+/*
 AMateria &AMateria::operator=(const AMateria &tmp) {
 
   if (this != &tmp) {
@@ -19,6 +20,7 @@ AMateria &AMateria::operator=(const AMateria &tmp) {
   }
   return (*this);
 }
+*/
 
 
 // Methods:

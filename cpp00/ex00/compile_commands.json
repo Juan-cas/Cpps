@@ -1,0 +1,17 @@
+[
+ {
+  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp00/ex00",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-c",
+   "-o",
+   "megaphone.o",
+   "megaphone.cpp"
+  ],
+  "file": "megaphone.cpp"
+ }
+]
