@@ -19,8 +19,6 @@ int main() {
       for (int i = 0; i < 5; i++) {
         information[i] = PhoneBook::new_contact(i);
       }
-      if (counter > 7)
-        counter = 7;
       book.Contacts[counter].c_adder(&book, information, counter);
       counter++;
     } else if (checker == "SEARCH") {

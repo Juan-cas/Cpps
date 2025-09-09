@@ -3,7 +3,7 @@ HEADERS = PhoneBook.hpp Contact.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = phonebook
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address,leak
 CXX = clang++
 RM = rm -f
 

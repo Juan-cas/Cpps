@@ -7,7 +7,6 @@ typedef class PhoneBook PhoneBook;
 
 class Contact {
 private:
-  std::string _index;
   std::string _first_name;
   std::string _last_name;
   std::string _nick_name;
@@ -15,11 +14,12 @@ private:
   std::string _darkest_secret;
 
 public:
+  int _index;
   void c_adder(PhoneBook *book, std::string information[5], int number);
   static std::string check_str(const std::string &information);
 
   // setters:
-  void setIndex(std::string number);
+  void setIndex(int indexNum);
   void setFirstName(std::string name);
   void setLastName(std::string last_name);
   void setNickName(std::string nickname);
@@ -27,7 +27,7 @@ public:
   void setDaskestSecret(std::string Darkest_secret);
 
   // getters:
-  std::string getIndex();
+  int getIndex();
   std::string getPhoneNumber();
   std::string getFirstName();
   std::string getLastName();

@@ -5,23 +5,25 @@
 #include <sstream>
 #include <string>
 
-void Contact::c_adder(PhoneBook *book, std::string information[5], int number) {
+#define MAX_CONTACTS 8
+#define CONTACT_INFO 5
+
+void Contact::c_adder(PhoneBook *book, std::string information[CONTACT_INFO],
+                      int number) {
   if (number > 7) {
     number = 7;
-    for (int i = 1; i < 8; i++) {
+    for (int i = 1; i < MAX_CONTACTS; i++) {
       book->Contacts[i - 1] = book->Contacts[i];
+      book->Contacts[i - 1]._index = i - 1;
     }
   }
-  std::stringstream ss;
-  ss << number;
-  std::string index = ss.str();
-  book->Contacts[number].setIndex(index);
+  book->Contacts[number].setIndex(number);
   book->Contacts[number].setFirstName(information[0]);
   book->Contacts[number].setLastName(information[1]);
   book->Contacts[number].setNickName(information[2]);
   book->Contacts[number].setPhoneNumber(information[3]);
   book->Contacts[number].setDaskestSecret(information[4]);
-};
+}
 
 std::string Contact::check_str(const std::string &information) {
   if (information.length() > 10)
@@ -31,7 +33,7 @@ std::string Contact::check_str(const std::string &information) {
 }
 
 // setters:
-void Contact::setIndex(std::string number) { _index = number; }
+void Contact::setIndex(int indexNum) { _index = indexNum; }
 void Contact::setFirstName(std::string name) { _first_name = name; }
 void Contact::setLastName(std::string last_name) { _last_name = last_name; }
 void Contact::setNickName(std::string nickname) { _nick_name = nickname; }
@@ -43,7 +45,7 @@ void Contact::setDaskestSecret(std::string Darkest_secret) {
 }
 
 // getters:
-std::string Contact::getIndex() { return _index; }
+int Contact::getIndex() { return _index; }
 std::string Contact::getPhoneNumber() { return _phone_number; }
 std::string Contact::getFirstName() { return _first_name; }
 std::string Contact::getLastName() { return _last_name; }

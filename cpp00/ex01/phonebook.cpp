@@ -17,9 +17,8 @@ void PhoneBook::c_print() {
   for (int i = 0; i < 8; i++) {
     if (this->Contacts[i].getFirstName().empty() == true)
       break;
-    std::cout << std::setw(10) << std::right
-              << Contact::check_str(this->Contacts[i].getIndex()) << "|"
-              << std::setw(10) << std::right
+    std::cout << std::setw(10) << std::right << this->Contacts[i].getIndex()
+              << "|" << std::setw(10) << std::right
               << Contact::check_str(this->Contacts[i].getFirstName()) << "|"
               << std::setw(10) << std::right
               << Contact::check_str(this->Contacts[i].getLastName()) << "|"
@@ -90,7 +89,7 @@ std::string PhoneBook::new_contact(int flag) {
   while (true) {
     getline(std::cin, information);
     if (information.empty()) {
-      std::cout << "The entry can't be empty" << std::endl;
+      std::cout << "You must write something" << std::endl;
       continue;
     }
     if (flag == 3) {
@@ -99,8 +98,8 @@ std::string PhoneBook::new_contact(int flag) {
         continue;
       }
       break;
-    } else if (is_whitespace_only(information)) {
-      std::cout << "the entry can't be only whitespaces" << std::endl;
+    } else if (information.empty() || is_whitespace_only(information)) {
+      std::cout << ". please try again: " << std::endl;
       continue;
     }
     break;
