@@ -1,6 +1,7 @@
 
 
 #include "ClapTrap.hpp"
+#include <iostream>
 
 void copy_test(void) {
   std::cout << "Copy testing starting" << std::endl;

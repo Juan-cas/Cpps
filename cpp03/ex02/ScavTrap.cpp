@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
-
+#include <iostream>
 
 // constructors:
 
@@ -20,13 +20,15 @@ ScavTrap::ScavTrap(const std::string input) : ClapTrap() {
 }
 
 ScavTrap::ScavTrap(const ScavTrap &tmp) : ClapTrap(tmp) {
-    this->set_name(tmp.get_name());
-    this->set_hp(tmp.get_hp());
-    this->set_ep(tmp.get_ep());
-    this->set_dmg(tmp.get_dmg());
+  this->set_name(tmp.get_name());
+  this->set_hp(tmp.get_hp());
+  this->set_ep(tmp.get_ep());
+  this->set_dmg(tmp.get_dmg());
 }
 
-ScavTrap::~ScavTrap() { std::cout << "ScavTrap Destructor called" << std::endl; }
+ScavTrap::~ScavTrap() {
+  std::cout << "ScavTrap Destructor called" << std::endl;
+}
 
 // overloads:
 ScavTrap &ScavTrap::operator=(const ScavTrap &tmp) {
@@ -38,5 +40,5 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &tmp) {
 
 // methods:
 void ScavTrap::guardGate() {
-  std::cout << this->get_name() << "is now in gatekeeper mode." << std::endl;
+  std::cout << this->get_name() << " is now in gatekeeper mode." << std::endl;
 }

@@ -1,47 +1,50 @@
 [
- {
-  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
-  "arguments": [
-   "c++",
-   "-Wall",
-   "-Wextra",
-   "-Werror",
-   "-std=c++98",
-   "-c",
-   "main.cpp",
-   "-o",
-   "main.o"
-  ],
-  "file": "main.cpp"
- },
- {
-  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
-  "arguments": [
-   "c++",
-   "-Wall",
-   "-Wextra",
-   "-Werror",
-   "-std=c++98",
-   "-c",
-   "Zombie.cpp",
-   "-o",
-   "Zombie.o"
-  ],
-  "file": "Zombie.cpp"
- },
- {
-  "directory": "/home/jcas/coding_env/github.com/Juan-cas/Cpps/cpp01/ex00",
-  "arguments": [
-   "c++",
-   "-Wall",
-   "-Wextra",
-   "-Werror",
-   "-std=c++98",
-   "-c",
-   "randomChump.cpp",
-   "-o",
-   "randomChump.o"
-  ],
-  "file": "randomChump.cpp"
- }
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00",
+    "file": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00/main.cpp",
+    "output": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "Zombie.o",
+      "Zombie.cpp"
+    ],
+    "directory": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00",
+    "file": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00/Zombie.cpp",
+    "output": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00/Zombie.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "randomChump.o",
+      "randomChump.cpp"
+    ],
+    "directory": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00",
+    "file": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00/randomChump.cpp",
+    "output": "/home/jcas/Work/github.juan/Cpps/cpp01/ex00/randomChump.o"
+  }
 ]

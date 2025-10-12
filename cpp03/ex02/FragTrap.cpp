@@ -1,5 +1,6 @@
 #include "FragTrap.hpp"
 #include "ClapTrap.hpp"
+#include <iostream>
 
 // constructor:
 
