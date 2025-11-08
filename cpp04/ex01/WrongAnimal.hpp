@@ -13,8 +13,8 @@ public:
   WrongAnimal(void);
   WrongAnimal(std::string type);
   WrongAnimal(const WrongAnimal &otherAnimal);
-  virtual ~WrongAnimal(void);
-  virtual WrongAnimal &operator=(WrongAnimal &this_animal);
+  ~WrongAnimal(void);
+  WrongAnimal &operator=(WrongAnimal &this_animal);
 
   // getter:
   std::string getType(void) const;
@@ -23,7 +23,7 @@ public:
   void set_type(std::string type);
 
   // method:
-  virtual void makeSound() const;
+  void makeSound() const;
 };
 
 #endif

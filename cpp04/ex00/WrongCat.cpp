@@ -25,6 +25,4 @@ WrongCat &WrongCat::operator=(WrongCat &otherAnimal) {
 }
 
 // method:
-void WrongCat::makeSound(void) const {
-  std::cout << "Woof opps wrong one" << std::endl;
-}
+void WrongCat::makeSound(void) const { std::cout << "Woof" << std::endl; }

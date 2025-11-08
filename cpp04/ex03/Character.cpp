@@ -81,6 +81,12 @@ Character &Character::operator=(const Character &tmp) {
 
 void Character::equip(AMateria *m) {
   for (int i = 0; i < 4; i++) {
+    if (m == _Inventory[i]) {
+      std::cout << "The materia is already equiped, please create another one "
+                   "and equip the new one"
+                << std::endl;
+      return;
+    }
     if (!_Inventory[i]) {
       _Inventory[i] = m;
       return;

@@ -17,7 +17,7 @@ Animal::Animal(const Animal &otherAnimal) {
 }
 
 Animal::~Animal() {
-  std::cout << "The Animal destructor has been called" << std::endl;
+  std::cout << "The Animal destructor has been called\n" << std::endl;
 }
 
 void Animal::makeSound() const {

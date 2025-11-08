@@ -3,25 +3,21 @@
 
 // Constructor:
 
-
 AMateria::AMateria(std::string str) : _Type(str) {}
 
-AMateria::AMateria(const AMateria &var) : _Type(var._Type){}
+AMateria::AMateria(const AMateria &var) : _Type(var._Type) {}
 
 AMateria::~AMateria(void) {}
 
 // Overloads:
 
-/*
 AMateria &AMateria::operator=(const AMateria &tmp) {
 
   if (this != &tmp) {
-    _Type = tmp._Type;
+    _Type = tmp.getType();
   }
   return (*this);
 }
-*/
-
 
 // Methods:
 

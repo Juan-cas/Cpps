@@ -14,7 +14,7 @@ public:
   WrongAnimal(std::string type);
   WrongAnimal(const WrongAnimal &otherAnimal);
   virtual ~WrongAnimal(void);
-  virtual WrongAnimal &operator=(WrongAnimal &this_animal);
+  WrongAnimal &operator=(WrongAnimal &this_animal);
 
   // getter:
   std::string getType(void) const;

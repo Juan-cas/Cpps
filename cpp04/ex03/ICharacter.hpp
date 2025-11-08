@@ -7,7 +7,6 @@
 class ICharacter {
 
 private:
-
 public:
   // Constuctors:
   ICharacter(void);

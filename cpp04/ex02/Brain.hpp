@@ -1,6 +1,5 @@
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
-#include <iostream>
 #include <string>
 
 class Brain {
@@ -14,10 +13,8 @@ public:
   Brain(const Brain &var);
   ~Brain(void);
   Brain &operator=(const Brain &tmp);
-  void Ideas(void) {
-
-  }
+  void getIdea(int index);
+  void setIdea(int index, std::string idea);
 };
-std::ostream &operator<<(std::ostream &os, const Brain &tmp);
 
 #endif

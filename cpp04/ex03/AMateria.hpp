@@ -1,14 +1,15 @@
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
-#include <iostream>
 #include "IMateriaSource.hpp"
+#include <iostream>
 #include <string>
 
 typedef class ICharacter ICharacter;
 
 class AMateria {
 
-private:
+protected:
+  std::string _Type;
 
 public:
   // Constructors:
