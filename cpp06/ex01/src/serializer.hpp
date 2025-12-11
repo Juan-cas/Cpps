@@ -1,4 +1,5 @@
-#include <cstdint>
+#include <cstddef>
+#include <stdint.h>
 #include <string>
 
 struct Data {
