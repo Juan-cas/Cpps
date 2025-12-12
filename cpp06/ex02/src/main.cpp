@@ -9,8 +9,10 @@
 static std::string classes[] = {"A", "B", "C"};
 
 static Base *generate(void) {
+  std::srand(time(NULL));
+  int r = std::rand() % 3;
 
-  switch (rand() % 3) {
+  switch (r) {
   case 1:
     return (new classA());
   case 2:
@@ -37,30 +39,31 @@ static void identify(Base *p) {
 
 static void identify(Base &p) {
   try {
-    classA &a = dynamic_cast<classA &>(p);
-    std::cout << "The pointer is of classA" << std::endl;
-  } catch (std::bad_cast &e) {
+    (void)dynamic_cast<classA &>(p);
+    std::cout << "The reference is of classA" << std::endl;
+  } catch (...) {
   }
   try {
-    classB &b = dynamic_cast<classB &>(p);
-    std::cout << "The pointer is of classB" << std::endl;
-  } catch (std::bad_cast &e) {
+    (void)dynamic_cast<classB &>(p);
+    std::cout << "The reference is of classB" << std::endl;
+  } catch (...) {
   }
   try {
-    classC &c = dynamic_cast<classC &>(p);
-    std::cout << "The pointer is of classC" << std::endl;
-  } catch (std::bad_cast &e) {
+    (void)dynamic_cast<classC &>(p);
+    std::cout << "The reference is of classC" << std::endl;
+  } catch (...) {
   }
 }
 
 int main() {
+  std::cout << "\nRandomizing the creationg of the class" << std::endl;
   Base *base1 = generate();
+
+  std::cout << "\nUsing identify to identify the pointer type" << std::endl;
   identify(base1);
-  identify(base1);
-  Base *base2 = generate();
-  identify(base2);
-  identify(base2);
-  Base *base3 = generate();
-  identify(base3);
-  identify(base3);
+
+  std::cout << "\nUsing identify to identify the reference type" << std::endl;
+  identify(*base1);
+
+  delete base1;
 }

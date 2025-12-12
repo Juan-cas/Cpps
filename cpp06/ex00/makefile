@@ -1,4 +1,4 @@
-TARGET_EXEC := class_randomizer
+TARGET_EXEC := scalar_converter
 
 BUILD_DIR := ./build
 SRC_DIRS := ./src
