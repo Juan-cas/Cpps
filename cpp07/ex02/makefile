@@ -1,4 +1,4 @@
-TARGET_EXEC := scalar_converter
+TARGET_EXEC := Array
 
 BUILD_DIR := ./build
 SRC_DIRS := ./src
@@ -13,7 +13,7 @@ DEPS := $(OBJS:.o=.d)
 INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
-CPPFLAGS := $(INC_FLAGS) -MMD -MP -Wall -Wextra -Werror -std=c++98 $(ADDITIONALFLAGS)
+CPPFLAGS := $(INC_FLAGS) -MMD -MP -Wall -Wextra -Werror -g3 -std=c++98 $(ADDITIONALFLAGS)
 LDFLAGS:=
 CXX:= c++
 
